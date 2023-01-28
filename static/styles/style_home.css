@@ -1,0 +1,204 @@
+
+.btn1{
+    border-radius: 3px;
+    background: #545454;
+    color:white;
+    transition-duration: 0.4s; 
+    margin-top: 50px; 
+    margin-left: 30px; 
+    padding:20px 30px 20px 30px;
+    text-align:center;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 6px;
+    font-weight: bold;
+}
+.btn1:hover{
+    background-color:#00801C;
+    color: white;
+    text-decoration: none;
+}
+#signup{
+    margin-left: 200px;
+    text-decoration:none;
+}
+
+/*Navbar*/
+.logo-img{
+    width: 150px;
+    height: 100px;
+    padding-left: 2%;
+}
+
+.navbar{
+    height: 80px;
+}
+
+.nav-link{
+    padding-right: 3%;
+}
+
+/*Home CSS*/
+
+.home{
+    padding-top: 30%;
+    padding-left: 15%;
+    padding-bottom:15%;
+    background-image: url('../assets/img/background_image_new.png');
+    background-size:cover;
+    background-repeat: no-repeat;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+}
+.complete{
+    display:grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 80%;
+    margin:5%;
+    
+}
+.left{
+    padding: 3%;
+}
+.brand_image{
+    width:600px;
+    height:600px;
+    border-radius: 10px;
+}
+.right{
+    padding-top: 25%;
+    margin-top:5%;
+}
+
+/* About page*/
+.text{
+    /* background-color:#dadada; */
+    margin-left:5%;
+    margin-right:5%;
+    margin-top:2%;
+}
+
+.about_us{
+    margin-top:2%;
+}
+
+.team{
+    margin-top:4%;
+}
+.team_grid{
+    display:grid;
+    grid-template-columns: auto auto auto;
+    margin-top: 3%;
+}
+.team_member{
+    margin-top: 3%; 
+}
+.circular--square { 
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+.circular--square { 
+    border-top-left-radius: 50% 50%;
+    border-top-right-radius: 50% 50%;
+    border-bottom-right-radius: 50% 50%;
+    border-bottom-left-radius: 50% 50%;
+}
+
+
+/*More Info*/
+.complete1{
+    display:grid;
+    grid-template-columns: auto auto;
+    margin-top:3%;
+}
+.info_image{
+    width:500px;
+    height:500px;
+    border-radius: 10px;
+}
+.left1{
+    padding: 3%;
+}
+.right1{
+    margin-top:5%;
+    width:400px;
+    height:400px;
+}
+.text1{
+    background-color:#dadada;
+    padding: 3% 4% 3% 4%;
+    margin-left:5%;
+    margin-right:5%;
+    margin-top:3%;
+}
+/*Contact*/
+
+/*More Info*/
+.complete1{
+    display:grid;
+    grid-template-columns: 50% 50%;
+    margin-top:3%;
+}
+.info_image{
+    width:500px;
+    height:500px;
+    border-radius: 10px;
+}
+.left1{
+    padding: 3%;
+}
+.right1{
+    margin-top:8%;
+}
+.text1{
+    background-color:#dadada;
+    
+}
+
+/*Login page-1*/
+
+.login_page1{
+    background-color:#dadada;
+    padding: 3% 4% 3% 4%;
+    margin-left:5%;
+    margin-right:5%;
+    margin-top:10%;
+}
+
+
+.navbar2{
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+
+/*login-page2*/
+
+.loginpage2{
+    margin-top:10px;
+    margin-bottom:10px;
+    padding: 3% 3% 3%;      
+}
+.card{
+    border:lightgray;
+    border-radius:5px;
+    border-width: 3px;
+    
+}
+.up-login{
+    margin-top: 10px;
+}
+.down-login{
+    margin-top:10px; 
+}
+.upload_audio{
+    margin-top:10px;
+    padding:3%;
+    border:solid 2px lightgray;
+    border-width:3px;
+    
+}

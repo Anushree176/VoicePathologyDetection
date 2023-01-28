@@ -1,0 +1,171 @@
+{% extends "navbar.html" %}
+
+<title> {% block title %} home {% endblock %} </title>
+{% block css %}
+    <link rel= "stylesheet" type="text/css" href="{{url_for('static', filename='styles/style_home.css') }}">
+{% endblock %}
+
+{% block content %}
+<script>
+function Onchange(){
+    let password = document.querySelector('input[name= reg_pass]'); 
+    let confirm =   document.querySelector('input[name= reg_conpass]');
+    console.log(password.value);
+    console.log(confirm.value);
+    document.getElementById("error_message").style.display = 'none';
+    if (password.length != 0){
+        if (confirm.value != password.value)  {
+              document.getElementById("error_message").style.display = "block";
+              document.getElementById("error_message").style.color = "#FF0000";
+              return false;
+      }
+        }
+    }
+     function clear(){
+         let btnClear = document.getElementById("clear_btn");
+         let inputs = document.querySelectorAll('input');
+         btnClear.addEventListener('click()', () => {
+             inputs.forEach(inputs => input.value ='');
+         });
+     }   
+</script>
+<div class= "home">
+    <!-- <h3 class="brand_name"><b>BRAND NAME</b></h3>
+    <h4 class="tag_line">Tag Line / Action Statement</h4> -->
+   <!--<a href="{{ url_for('info') }}" class="btn1" >Get Started</a>-->
+    <a href="#info" class="btn1">Get Started</a>
+</div>
+<div class="complete" id="info">
+    <div class="left">
+        <img src="/static/assets/img/brand_image.png" alt="info Image" class="brand_image" align="left">
+    </div>
+
+    <div class="right">
+        <h3>
+            INFORMATION
+        </h3>
+        <h4>
+            Action Statement 
+        </h4>
+        <button type="button" class="btn1" id="login" data-toggle="modal" data-target="#exampleModalCenter">Login</button>
+        <button type="button" class="btn1" id="signup" data-toggle="modal" data-target="#exampleModal">Sign Up</button>
+    </div>
+            <!-- Modal -->
+        <!-- Login Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Login</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form class="registration-form1" action="{{url_for('login')}}", method="POST" id="reg_form">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="reg_username" class="col-sm-4 col-form-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="login_email" name="useremail" placeholder="Enter your email here" required>
+                                <small id="email_warn"></small>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="reg_pass" class="col-sm-4 col-form-label">Password</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="login_pass" name="password" placeholder="Create a password" required>
+                                <small id="password_warn"></small>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary" id="login_button">Login</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Sign Up Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">SIGNUP</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form class="registration-form1" action="{{ url_for('insertion') }}" method="POST" id="reg_form">
+                    <div class="modal-body">
+                        <!--starting of My Form -->
+
+                            <!-- <div class="form-group">
+                            <label for="reg_id" class="col-sm-4 col-form-label">Adhar ID</label>
+                            <div class="col-sm-10">
+                            <input type="text" class="form-control" id="reg_id" name="reg_id" placeholder="Enter your ID here" required>
+                            <small id="reg_id_warn"></small>
+                            </div>
+                            </div> -->
+
+                            <div class="form-group">
+                                <label for="reg_name" class="col-sm-4 col-form-label">Name</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" id="reg_name" name="reg_name" placeholder="Enter your name here" required>
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact_no" class="col-sm-4 col-form-label">Phone</label>
+                                <div class="col-sm-10">
+                                    <input type="tel" class="form-control" id="contact" name="reg_contact" placeholder="Enter your phone number here" required>
+                                    <small id="email_warn"></small>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="reg_username" class="col-sm-4 col-form-label">Email</label>
+                                <div class="col-sm-10">
+                                    <input type="email" class="form-control" id="reg_useremail" name="reg_email" placeholder="Enter your email here" required>
+                                    <small id="email_warn"></small>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="reg_pass" class="col-sm-4 col-form-label">Password</label>
+                                <div class="col-sm-10">
+                                    <input type="password" class="form-control" id="reg_pass" name="reg_pass" onChange = "Onchange()" placeholder="Create a password" required>
+                                    <small id="password_warn"></small>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="reg_conpass" class="col col-form-label"> Confirm Password</label>
+                                <div class="col-sm-10">
+                                    <input type="password" class="form-control" id="reg_conpass" name="reg_conpass" onChange = "Onchange()" placeholder="Confirm your password">
+                                </div>
+                                <p id="error_message" style="display: none;">Passwords do not match</p>
+                            </div> 
+
+                            <!-- <div class="form-group">
+                            <div class="col-sm-10">
+                            <button type="submit" class="btn btn-primary" id="register_button" disabled>Register</button>
+                            </div>
+                            <div class="col-sm-10">
+                            <button type="submit" class="btn btn-primary"  onclick="closeForm()" disabled>Close</button>
+                            </div>
+                            </div> -->
+                    </div>
+                    <div class="modal-footer">
+                        <button type="reset" class="btn btn-secondary" id="clear_btn">Clear</button>
+                        <button type="submit" class="btn btn-primary" id="register_button">Register</button>
+                    </div>
+                <!--end of My Form --> 
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,86 @@
+
+{% extends "navbar3.html" %}
+{% block content %}
+<div class="loginpage2">
+    <h3>
+        {{session["name"] }}
+    </h3>
+    <div class="up-login container card mb-3">
+        <h3>Pathological Voice Detector</h3>
+        <div class="row">
+            <div class="col-3" id="upload_description">
+               
+            </div>
+            <div class="col-3">
+                    <ul>
+                        <li>Record the audio sample of "aaa..." sound</li>
+                        <li>Upload the .wav type audio file.</li>
+                    </ul>
+            </div>
+            <div class="col-3" id="upload_description">
+                <form action="{{url_for('detector_upload')}}" method="POST" enctype="multipart/form-data">
+                    <label for="formFile" class="form-label">Select Audio File</label>
+                    <input class="form-control" type="file" id="formFile" name="formFile" accept="audio">
+                    <button class="upload_audio btn-secondary mb-2" type="submit">Upload Audio</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <div class="down-login container card mb-3">
+        <h3>Results </h3>
+        <div class="row">
+            <div class="col">         
+                {% if result|length > 0 %}
+                <p class="output">{{result}}</p>
+                {% else %}
+                <p class="output">The output will be displayed here.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    
+    <div class="up-login container card mb-3 mt-3"  >
+        <h3>Voice Comparator</h3>
+        <form action="{{url_for('comparator_upload')}}" method="POST" enctype="multipart/form-data">
+            <div class="row">
+                <div class="col-3" id="upload_description">
+                    <label for="formFile" class="form-label"></label>
+                    <input class="form-control" type="file" id="formFile1" name="formFile1" accept="audio">
+                </div>
+                <div class="col-6">
+                    <label for="steps" class="form-label">Steps to Upload audio:</label>
+                    <ul>
+                        <li>Upload the previous voice recorded earlier in old voice input.(left)</li>
+                        <li>Record your current voice.</li>
+                        <li>Upload the recording in new audio upload input section.(right)</li>
+                        <li>The audio sample should be "aaa.." sound in .wav format .</li>
+                    </ul>
+                </div>
+                <div class="col-3">
+                    <input class="form-control" type="file" id="formFile2" name="formFile2" accept="audio">
+                    
+                </div>
+            </div>
+            <div class="row center mx-auto">
+                <div class="col">
+                    <button class="upload_audio center mb-2 btn-secondary form-control " type="submit">Upload Audio</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <div class="down-login container card">
+        <h3>Results </h3>
+        <div class="row">
+            <div class="col">         
+                {% if result|length > 0 %}
+                <p class="output">{{result}}</p>
+                {% else %}
+                <p class="output">The output will be displayed here.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends "navbar.html" %}
+<title> {% block title %} home {% endblock %} </title>
+{% block css %}
+    <link rel= "stylesheet" type="text/css" href="{{url_for('static', filename='styles/style_home.css') }}">
+{% endblock %}
+
+{% block content %}
+    <div class= "about_us">
+        <h3><b><center>
+            ABOUT US
+            </center></b></h3>
+        <p class="text">
+            We are a team of engineers, passionate about technology and keen to use our knowledge for the betterment 
+            of others. We have observed that there are several cases of pathologically affected voice that goes 
+            undetected and results in permanent damage or complete loss of voice. Also, as compared to other fields in 
+            the medical domain, voice pathology has received less attention. 
+        </p>
+        <p class="text">
+            With the voice being a principal tool allowing individuals to communicate, it is necessary to shed light 
+            as well as resolve this problem. Therefore, we have developed a tool to help out these individuals through 
+            early detection of their voice disorder.
+        </p>
+
+    </div> 
+    <div class="team">
+        <center>
+        <h3>
+            <b>OUR TEAM</b>
+        </h3>
+        <div class="team_grid">
+          <div class="grid-item">
+              <img class="circular--square" src="/static/assets/img/Ruchi_Photo.jpg" />
+              <h5 class="team_member">
+                  Ruchi Bheke
+              </h5>
+          </div>
+          <div class="grid-item">
+              <img class="circular--square" src="/static/assets/img/aditya.jpeg" />
+              <h5 class="team_member">
+                  Aditya Borude
+              </h5>
+          </div>
+          <div class="grid-item">
+              <img class="circular--square" src="/static/assets/img/anushree.jpg" />
+              <h5 class="team_member">
+                  Anushree Kolhe
+              </h5>
+          </div>
+         
+        </div>
+        </center>
+    </div>
+{% endblock %}

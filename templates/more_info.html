@@ -1,0 +1,22 @@
+{% extends "navbar.html" %}
+<title> {% block title %} more_info {% endblock %} </title>
+{% block css %}
+    <link rel= "stylesheet" type="text/css" href="{{url_for('static', filename='styles/style_home.css') }}">
+{% endblock %}
+{% block content %}
+    <h3 class = "information_page">
+            <center><b>Information Page</b></center>
+    </h3>
+    <div class= "complete1">
+        
+        <div class= "left1">
+            <img src="/static/assets/img/info1.png" alt="info Image" class="info_image">
+        </div>
+        <div class="right1">
+            <p class="text1">
+                A pathological voice is a result of disorders or damage to the vocal organs by any means, and not limited to pathogens. Voice pathology can be caused by tissue infection, and muscular changes, and other factors. Due to vocal pathology, the mobility, functionality, and shape of the vocal folds are affected resulting in irregular vibrations and increased acoustic noise. Such voice sounds strained, harsh, weak, and breathy, which significantly contributes to the overall poor voice quality. However, the effects of untreated voice dysfunction may have a drastic impact on social, occupational, and personal aspects of communication.The proposed framework focuses on early diagnosis and treatment of pathological voice disorder with the aid to deep learning models. It also sheds light on a unique pathway to develop a system which requires less computational complexity and provides faster processing as compared to the traditional systems.
+            </p>
+
+        </div>
+    </div>
+{% endblock %}
