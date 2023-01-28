@@ -1,1 +1,4 @@
 *.ipynb_checkpoints
+resnet50_weights_multi_e20_bs4_st50
+__pycache__
+goorm.manifest
