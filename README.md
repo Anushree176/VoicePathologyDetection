@@ -23,3 +23,36 @@ research work for the proposed system but no-real world implementation. As we ai
 increase the accuracy of the healthcare system, the predicted result should be interpreted by a
 specialist and then advised upon. Therefore, our system also provides prompt and appropriate
 medical assistance to the patients detected with pathological voice disorders.
+
+
+### Scope
+The proposed framework focuses on early diagnosis and treatment of pathological voice
+disorder with the aid to deep learning models. It also sheds light on a unique pathway to
+develop a system which requires less computational complexity and provides faster
+processing as compared to the traditional systems.
+
+Deliverables of the project can be summarized as follows :
+- Cost-effective and accurate diagnosis reports provided to the patients
+- User-friendly & remotely accessible application for both, patients as well as medical
+professionals
+<br>
+
+Exclusions and constraints of the proposed project can be elucidated as follows: 
+- The focus of the system will be on the detection of functional dysphonia, limited to
+physical damage only, and will not consider other pathologies. Other pathologies are
+out of the scope of this project.
+- The system will face a cold-start problem for discriminating the changes in the voice,
+as the use of the Comparator network is possible only if previously recorded audio of
+the patient is available.
+- Exceptional cases might occur in the classification phase, as there is a possibility of
+multiple pathologies (other than the one due to physical damage) having similar
+characteristics and symptoms. In this case, the pathology will be detected but will be
+misclassified and needs to be further investigated by the medical professional.
+
+### Methodology
+
+
+### Application
+The application of the suggested system is in the biomedical field where it will provide an
+individual, easy accessibility to medical assistance as well as cost effective and accurate
+diagnosis of voice disorders caused due to physical detriment.
