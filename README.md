@@ -1,29 +1,30 @@
-# Voice Pathology Detection
-The final year project of Anushree Kolhe, Ruchi Bheke and Aditya Borude for the course of B.E. Computer Engineering at S.I.E.S. Graduate School of Technology in the academic session 2018-2022.
+# Voice Pathology Detection System using Deep Learning
+<!--The final year project of Anushree Kolhe, Ruchi Bheke and Aditya Borude for the course of B.E. Computer Engineering at S.I.E.S. Graduate School of Technology in the academic session 2018-2022.-->
 
-<br>
+### Introduction
+The voice is a principal tool allowing individuals to communicate and exchange information
+in their day-to-day activities. However, any slight alteration in the voice production system
+might affect the voice quality. Speech dysfunction deviates quality, pitch, loudness, or vocal
+flexibility from voices of age, gender, and social classes. However, the individuals at high risk
+of developing voice disorders are teachers. Due to prolonged speaking periods, vocal strain
+from teaching in lecture rooms with poor acoustics or high background noises, the vocal
+damage exacerbates. These disorders are also observed in other individuals who use their
+voice professionally, like singers, lawyers, call center professionals, etc. The probability of
+this malady occurring is high in females and older individuals. With the use of advanced
+technology, like deep learning, it is possible to identify the symptoms of such illnesses at an
+early stage and prevent severe damage to vocal organs.
 
-### Abstract
-A pathological voice is the result of disorders or damage to vocal organs by any means such
-as tissue infection, systemic changes, mechanical stress, etc, and not limited to pathogens like
-viruses, bacteria, fungus, and parasites. The main aim of our system is early detection and
-diagnosis of pathological voice disorders using deep learning models, which will also be
-easily accessible to the public. The previously proposed systems do not shed light on the
-comparative similarity check for the same individual. This system consists of two different
-processes, the first being a CNN classifier which is a binary classifier used for the
-classification of pathological voice and normal voice, and the second is a voice discriminator
-to compute the similarity of the inputs by comparing the feature vectors. Before this, the
-signal is transformed as an image (spectrograms) with time and frequency in two dimensions.
-The spectrograms can be effectively used to capture the characteristics of the signal. The
-Comparator network is used to calculate the similarity score between two inputs based on
-their feature vectors. Thus, if the historical audio data of the patient is available, the
-Comparator network can be used as a discriminator. between two audio inputs, the current
-voice and the previously recorded voice of the patient. According to our survey, there is much
-research work for the proposed system but no-real world implementation. As we aim to
-increase the accuracy of the healthcare system, the predicted result should be interpreted by a
-specialist and then advised upon. Therefore, our system also provides prompt and appropriate
-medical assistance to the patients detected with pathological voice disorders.
-
+### Need of Project
+A pathological voice is a result of disorders or damage to the vocal organs by any means, and
+is not limited to pathogens, like viruses, bacteria, fungus, and parasites. Voice pathology can
+be caused by tissue infection, systemic changes, mechanical stress, surface irritation, tissue
+changes, neurological and muscular changes, and other factors. Due to vocal pathology, the
+mobility, functionality, and shape of the vocal folds are affected resulting in irregular
+vibrations and increased acoustic noise. Such voice sounds strained, harsh, weak, and breathy,
+which significantly contributes to the overall poor voice quality. The consequence of such
+pathological speech disorders is not life-threatening. However, the effects of untreated voice
+dysfunction may have a drastic impact on social, occupational, and personal aspects of
+communication.
 
 ### Scope
 The proposed framework focuses on early diagnosis and treatment of pathological voice
@@ -50,6 +51,7 @@ characteristics and symptoms. In this case, the pathology will be detected but w
 misclassified and needs to be further investigated by the medical professional.
 
 ### Methodology
+![Methodology followed](https://github.com/Anushree176/VoicePathologyDetection/blob/f3ea2c89e2e002700c7385c87b51f2c59a28bc31/Project%20Diagrams/Methodology_.png)
 
 
 ### Application
